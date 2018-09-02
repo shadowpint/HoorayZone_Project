@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: Remove this menu for production. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_forecast"
+          android:title="@string/forcast"
+          android:icon="@drawable/forcast"
+          app:showAsAction="always"
+          />
+</menu>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="60dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.vipulasri.ticketview.TicketView
+            app:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ticketView"
+            app:scallopRadius="10dp"
+            app:scallopPositionPercent="60"
+            app:showBorder="false"
+            app:borderWidth="1dp"
+            app:borderColor="@color/colorAccent"
+            app:showDivider="true"
+            app:dividerPadding="0dp"
+            app:dividerType="dash"
+            app:cornerType="rounded"
+            app:ticketElevation="8dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/event_qr"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingTop="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                app:srcCompat="@drawable/ic_qr_code" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/movie_ticket_number"
+                android:textColor="@color/grey"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="18dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/event_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/event_duration"
+                android:textColor="@color/grey"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/event_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_genre"
+
+                android:textColor="@color/grey"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date"
+                        android:textColor="@color/primary_text"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/event_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/movie_date"
+                        android:textColor="@color/grey"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/material_grey_300"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time"
+                        android:textColor="@color/primary_text"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/event_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/grey"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/material_grey_300"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ticket_venue"
+                        android:textColor="@color/primary_text"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/event_venue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/grey"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/ThemeOverlay.HoorayZone.AppBar.Ticket"
+        app:popupTheme="@style/ThemeOverlay.HoorayZone.Popup" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemBackground="@color/bgBottomNavigation"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconTint="@drawable/bottom_selector"
+        app:itemTextColor="@drawable/bottom_selector"
+        app:menu="@menu/menu_ticket_detail" />
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="105dp">
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            >
+        </com.google.android.gms.maps.MapView>
+
+        <ToggleButton
+            android:id="@+id/tb2"
+            style="@style/Widget.HoorayZone.Button.Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="100dp"
+
+            android:layout_gravity="top"
+            android:text="ToggleButton 2"
+            android:textOff="Show in Map"
+            android:textOn="Show In List" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/blog_feed_recycler_view"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="80dp"
+            android:padding="@dimen/spacing_small"
+            android:clipToPadding="false"/>
+
+        <ViewStub
+            android:id="@+id/stub_empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tb2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:layout="@layout/empty_view" />
+
+        <ProgressBar
+            style="?indeterminateProgressStyle"
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <include layout="@layout/include_drop_shadow_view"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

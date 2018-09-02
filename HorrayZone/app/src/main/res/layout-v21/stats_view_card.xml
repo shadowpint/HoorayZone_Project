@@ -1,0 +1,53 @@
+<LinearLayout android:layout_width="200dp"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+
+
+    android:id="@+id/proposal"
+
+    android:gravity="center_horizontal"
+    android:divider="@drawable/vertical_divider"
+    android:dividerPadding="12dip"
+    android:showDividers="middle"
+    android:background="@drawable/tablebox"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:paddingTop="10dp"
+
+
+            android:textColor="#000"
+             android:text="asjfasf"
+            android:paddingLeft="10dp"
+
+             android:layout_marginRight="20dp"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/production"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+
+            android:paddingTop="10dp"
+            android:text="asjfasf"
+
+
+            android:textColor="#000"
+
+
+            android:background="@android:color/transparent"
+            />
+    </LinearLayout>
+
+
+
+
+
+

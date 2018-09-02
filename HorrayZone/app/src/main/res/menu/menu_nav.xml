@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.MainActivity">
+
+    <item android:id="@+id/action_account"
+          android:orderInCategory="1"
+          android:icon="@drawable/ic_account_box_black_24dp"
+          android:title="@string/Account"
+          app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_search"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_search_white"
+        android:title="@string/select_city"
+
+        app:showAsAction="always"/>
+    <item android:id="@+id/action_my_booking"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_business"
+        android:title="@string/my_booking"
+
+        app:showAsAction="always"/>
+</menu>

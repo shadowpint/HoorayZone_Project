@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_small"
+    android:layout_marginBottom="10dp"
+
+    android:layout_marginLeft="5dp"
+
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="6dp"
+
+    app:cardElevation="6dp"
+    app:cardMaxElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.horrayzone.horrayzone.ui.widget.AspectRatioImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_placeholder"
+            android:scaleType="centerCrop"
+            app:aspectRatio="@dimen/aspect_ratio_16_9" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <com.horrayzone.horrayzone.ui.widget.FontTextView
+                android:id="@+id/tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:textColor="@color/colorSmall"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_small" />
+
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/RatingBar"
+                android:numStars="5"
+
+                android:rating="2.5"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_weight="0"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <com.horrayzone.horrayzone.ui.widget.FontTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:textColor="@color/album_title"
+                android:layout_weight="1"
+
+                android:textSize="@dimen/text_size_medium_large" />
+
+
+            <Button
+                style="@style/Widget.HoorayZone.Button.Green"
+                android:id="@+id/create_account_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/button_text_book"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/location_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="24dp"
+                android:maxHeight="24dp"
+
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:adjustViewBounds= "true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/location"/>
+
+
+            <com.horrayzone.horrayzone.ui.widget.FontTextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:text="On Wednesday, January 01"
+                android:layout_weight="1"
+                android:textColor="@color/text_disable"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+        <com.horrayzone.horrayzone.ui.widget.FontTextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:text="On Wednesday, January 01"
+            android:textColor="@color/text_disable"
+            android:textSize="@dimen/text_size_small" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

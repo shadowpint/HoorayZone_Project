@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="@dimen/album_title_padding">
+
+        <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginBottom="50dp"-->
+
+
+            <!--android:layout_marginLeft="20dp"-->
+
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_marginTop="80dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:visibility="gone"-->
+            <!--app:cardCornerRadius="6dp"-->
+            <!--app:cardElevation="6dp"-->
+            <!--app:cardMaxElevation="6dp"-->
+
+            <!--&gt;-->
+
+            <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal"-->
+
+
+                <!--&gt;-->
+
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/thumbnail"-->
+                    <!--android:layout_width="24dp"-->
+                    <!--android:layout_height="24dp"-->
+                    <!--android:alpha=".7"-->
+                    <!--android:clickable="true"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@drawable/ic_business"-->
+
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/title"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+
+                    <!--android:alpha=".7"-->
+
+
+                    <!--android:gravity="center"-->
+                    <!--android:padding="@dimen/album_title_padding"-->
+                    <!--android:text="Search Nearby"-->
+                    <!--android:textColor="@color/color_primary"-->
+                    <!--android:textSize="@dimen/album_title"-->
+                    <!--android:textStyle="bold" />-->
+
+
+            <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.CardView>-->
+
+        <TextView
+            android:id="@+id/event_nearby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="70dp"
+            android:alpha=".7"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/album_title"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/event_nearby"
+            android:background="@color/placeholder_bg"
+            android:padding="@dimen/album_title_padding" />
+
+        <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+            android:id="@+id/first_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+android:layout_below="@id/divider"
+            app:msrv_gravity="start"
+            app:msrv_milliseconds_per_inch="@dimen/normal_speed"
+            app:msrv_snap_count="1" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/first_recycler_view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_padding_horizontal"
+                    android:paddingRight="@dimen/activity_padding_horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@color/placeholder_bg" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                        android:layout_marginRight="@dimen/activity_padding_horizontal"
+                        android:layout_weight="1"
+                        android:background="@color/placeholder_bg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_padding_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_padding_horizontal"
+                    android:paddingRight="@dimen/activity_padding_horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@color/placeholder_bg" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                        android:layout_marginRight="@dimen/activity_padding_horizontal"
+                        android:layout_weight="1"
+                        android:background="@color/placeholder_bg" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_padding_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_padding_horizontal"
+                    android:paddingRight="@dimen/activity_padding_horizontal"
+                    android:weightSum="2">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:background="@color/placeholder_bg" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                        android:layout_marginRight="@dimen/activity_padding_horizontal"
+                        android:layout_weight="1"
+                        android:background="@color/placeholder_bg" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <ViewStub
+            android:id="@+id/empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tb2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:layout="@layout/empty_view"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="70dp"
+            android:clipToPadding="true"
+            android:paddingBottom="45dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="2dp"
+            android:scrollbars="vertical" />
+
+
+    </RelativeLayout>
+</ScrollView>

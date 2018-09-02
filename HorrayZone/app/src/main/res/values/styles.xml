@@ -1,0 +1,152 @@
+<resources>
+
+    <style name="ThemeOverlay.HoorayZone.AppBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:background">@color/theme_primary_dark</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="ThemeOverlay.HoorayZone.AppBar.Event" parent="ThemeOverlay.AppCompat.ActionBar">
+    <item name="android:homeAsUpIndicator">@drawable/back</item>
+    <item name="android:background">@color/transparent</item>
+</style>
+    <style name="ThemeOverlay.HoorayZone.AppBar.Ticket" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:homeAsUpIndicator">@drawable/back_black</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+    <style name="ThemeOverlay.HoorayZone.Popup" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--<style name="ThemeOverlay.HoorayZone.Button.Colored" parent="ThemeOverlay.AppCompat.Dark">
+        &lt;!&ndash;<item name="colorAccent">@color/white</item>&ndash;&gt;
+        <item name="colorButtonNormal">@color/theme_accent</item>
+        <item name="colorControlHighlight">#6fff</item>
+    </style>-->
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/text_disable</item>
+        <item name="colorControlActivated">@color/colorSmall</item>
+    </style>
+    <style name="Widget.HoorayZone.ActionButton" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minHeight">?actionBarSize</item>
+        <item name="android:minWidth">48dp</item>
+    </style>
+
+    <style name="Widget.HoorayZone.ActionButton.Overflow" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:minHeight">?actionBarSize</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="Widget.HoorayZone.CardView" parent="">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardPreventCornerOverlap">false</item>
+    </style>
+
+    <style name="Widget.HoorayZone.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/text_primary_selector</item>
+        <item name="android:textSize">@dimen/text_size_medium_large</item>
+        <item name="android:textColorHint">@color/text_disable</item>
+    </style>
+
+    <style name="Widget.HoorayZone.EditText.FloatingLabel">
+        <item name="android:paddingTop">@dimen/spacing_small</item>
+    </style>
+
+    <style name="Widget.HoorayZone.Button" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="Widget.HoorayZone.Button.Small" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="Widget.HoorayZone.Button.Default" parent="Widget.HoorayZone.Button">
+        <!--<item name="android:theme">@style/ThemeOverlay.HoorayZone.Button.Colored</item>-->
+        <item name="android:textColor">@color/text_primary_selector_inverse</item>
+        <item name="android:background">@drawable/button_default</item>
+    </style>
+
+    <style name="Widget.HoorayZone.Button.Gray" parent="Widget.HoorayZone.Button">
+        <item name="android:textColor">@color/text_primary_selector_inverse</item>
+        <item name="android:background">@drawable/button_gray</item>
+    </style>
+    <style name="Widget.HoorayZone.Button.Green" parent="Widget.HoorayZone.Button.Small">
+        <item name="android:textColor">@color/text_primary_selector_inverse</item>
+        <item name="android:background">@drawable/button_green</item>
+    </style>
+    <style name="Widget.HoorayZone.Button.White" parent="Widget.HoorayZone.Button">
+        <item name="android:textColor">@color/text_accent_selector</item>
+        <item name="android:background">@drawable/button_white</item>
+    </style>
+
+    <style name="Widget.HoorayZone.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextColor">@color/text_disable</item>
+        <item name="tabSelectedTextColor">?colorAccent</item>
+        <item name="android:background">?colorPrimary</item>
+    </style>
+
+    <style name="HoorayZone.Section.Title" parent="">
+        <item name="android:paddingLeft">@dimen/spacing_large</item>
+        <item name="android:paddingRight">@dimen/spacing_large</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.HoorayZone.SectionTitle</item>
+        <item name="typeface">Roboto-Medium.ttf</item>
+    </style>
+
+    <style name="Widget.HoorayZone.EmptyView" parent="">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="Widget.HoorayZone.FloatingActionButton" parent="Widget.Design.FloatingActionButton">
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginRight">@dimen/spacing_medium</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:tint">@color/white</item>
+        <item name="borderWidth">0dp</item>
+        <item name="rippleColor">#6fff</item>
+    </style>
+
+    <!-- Text Appearances -->
+
+    <style name="TextAppearance.HoorayZone" parent="TextAppearance.AppCompat" />
+
+    <style name="TextAppearance.HoorayZone.EmptyView">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.HoorayZone.EmptyView.Title">
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.HoorayZone.EmptyView.Subtitle">
+        <item name="android:textSize">@dimen/text_size_medium_large</item>
+        <item name="android:textColor">@color/text_disable</item>
+    </style>
+
+    <style name="TextAppearance.HoorayZone.SectionTitle">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+
+    <style name="TextAppearance.HoorayZone.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.HoorayZone.Toolbar.Title.Small" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/text_size_toolbar_title_small</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearance.HoorayZone.Toolbar.Subtitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">@dimen/text_size_toolbar_subtitle</item>
+    </style>
+
+</resources>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/theme_primary_dark"
+
+        android:minHeight="?attr/actionBarSize"
+
+
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+<ImageView
+    android:id="@+id/toolbar_image"
+    android:layout_width="50dp"
+    android:layout_height="30dp"
+    android:layout_gravity="left"
+    />
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:textColor="@color/white" />
+
+</LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:gravity="center"
+
+        >
+
+        <Button
+            android:id="@+id/data_type"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+
+            android:background="@drawable/linear_layout_corner"
+
+            android:text="Data Type"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/commodity_filter"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+
+            android:layout_toEndOf="@+id/data_type"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/linear_layout_corner"
+            android:text="Commodity Filter"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp"
+
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="10dp"
+        >
+        <Button
+            android:id="@+id/date_from"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+
+            android:background="@drawable/linear_layout_corner"
+            android:layout_marginRight="5dp"
+            android:text="From"
+            android:textColor="#ffffff" />
+
+
+        <Button
+            android:id="@+id/date_to"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+
+            android:layout_toEndOf="@+id/date_from"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/linear_layout_corner"
+            android:text="To"
+            android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+
+            android:layout_toEndOf="@+id/date_to"
+
+            android:background="@drawable/linear_layout_corner"
+            android:text="Submit"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/chart_shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+       android:visibility="gone"
+        >
+
+
+
+        <include layout="@layout/chart_placeholder_item" />
+
+
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".CountryDetailActivity" />
+</LinearLayout>

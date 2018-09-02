@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/animation_card"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/white"
+
+    app:cardMaxElevation="6dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+
+
+    app:cardCornerRadius="6dp"
+    app:cardElevation="10dp"
+    android:orientation="vertical">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/animation_view"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        app:lottie_rawRes="@raw/material_wave_loading"
+        android:layout_gravity="center"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="invisible" />
+
+
+</android.support.v7.widget.CardView>
+
+
+
+
