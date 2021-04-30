@@ -20,7 +20,7 @@ pyparsing==2.2.0
 pytz==2017.2
 requests==2.18.1
 requests-oauthlib==0.8.0
-rsa==3.4.2
+rsa==4.7
 shortuuid==0.5.0
 six==1.10.0
 social-auth-app-django==1.2.0
